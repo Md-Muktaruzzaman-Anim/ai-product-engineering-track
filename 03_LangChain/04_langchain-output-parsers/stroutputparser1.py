@@ -16,7 +16,7 @@ template1 = PromptTemplate(
 
 # 2nd prompt -> summary
 template2 = PromptTemplate(
-    template='Write a 5 line summary on the following text. /n {text}',
+    template='Write a 5 line summary on the following text. \n {text}',
     input_variables=['text']
 )
 
@@ -27,4 +27,3 @@ chain = template1 | model | parser | template2 | model | parser
 result = chain.invoke({'topic':'black hole'})
 
 print(result)
-
