@@ -1,27 +1,19 @@
+from typing import Annotated
+
 from fastapi import FastAPI, Depends
 
 app = FastAPI()
 
 
-class CommonParams:
-
-    def __init__(
-        self,
-        name: str = "",
-        page: int = 1,
-        limit: int = 10,
-    ):
-        self.name = name
-        self.page = page
-        self.limit = limit
+class CommonQueryParams:
+    def __init__(self, q: str | None = None):
+        self.q = q
 
 
-@app.get("/users")
-def get_users(
-    commons: CommonParams = Depends(),
+@app.get("/")
+async def home(
+    params: Annotated[CommonQueryParams, Depends()]
 ):
     return {
-        "name": commons.name,
-        "page": commons.page,
-        "limit": commons.limit,
+        "query": params.q
     }
