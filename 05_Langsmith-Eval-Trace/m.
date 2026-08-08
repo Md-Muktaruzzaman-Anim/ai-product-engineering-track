@@ -1,0 +1,5 @@
+Act as a Principal Software Architect. I am pasting a code snippet below. Teach me this code the way a top 1% elite engineer learns. Provide the breakdown using these 4 exact sections:1. LINE-BY-LINE & KEYWORD MECHANICS: Go through the code line-by-line. For every critical line, dissect what each keyword/function does, what type of data it inputs/outputs, and its exact internal work.
+2. SYSTEM UNDER THE HOOD: Explain the background architecture (memory usage, data structures, and the actual execution flow).
+3. REAL-WORLD ANALOGY: Provide a clear, non-technical analogy story for the entire pipeline.
+4. BREAKING POINT ANALYSIS: What parameters can I tweak to break this? Where are the potential performance bottlenecks, errors, or security risks?Here is the code:
+[PASTE YOUR CODE HERE]
