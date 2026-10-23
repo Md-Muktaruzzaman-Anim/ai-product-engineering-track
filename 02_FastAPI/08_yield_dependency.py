@@ -2,12 +2,12 @@ from typing import Annotated
 
 from fastapi import Depends, FastAPI
 
+
 app = FastAPI()
 
 
 class FakeDBSession:
-
-    async def close(self):
+    async def close(self) -> None:
         print("DB session closed")
 
 
@@ -24,7 +24,7 @@ async def get_db():
 
 @app.get("/users")
 async def users(
-    db: Annotated[FakeDBSession, Depends(get_db)]
+    db: Annotated[FakeDBSession, Depends(get_db)],
 ):
     return {
         "message": "query database here",
