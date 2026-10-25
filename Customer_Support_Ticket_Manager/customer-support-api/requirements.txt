@@ -1,0 +1,8 @@
+fastapi
+uvicorn[standard]
+sqlalchemy>=2.0,<3.0
+psycopg[binary]>=3.2
+python-dotenv
+pydantic[email]>=2.8
+pytest
+httpx
